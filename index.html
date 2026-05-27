@@ -1,0 +1,163 @@
+export default function AgroForteSite() {
+  return (
+    <div className="min-h-screen bg-green-50 text-gray-800 font-sans">
+      {/* Hero */}
+      <section className="bg-gradient-to-r from-green-700 to-lime-600 text-white py-20 px-6 text-center">
+        <h1 className="text-5xl font-bold mb-6">
+          Agro Forte, Futuro Sustentável
+        </h1>
+        <p className="text-xl max-w-3xl mx-auto">
+          Equilíbrio entre produção e meio ambiente para garantir alimento,
+          desenvolvimento e qualidade de vida para as próximas gerações.
+        </p>
+        <button className="mt-8 bg-white text-green-700 px-6 py-3 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition">
+          Saiba Mais
+        </button>
+      </section>
+
+      {/* Sobre */}
+      <section className="py-16 px-8 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 className="text-4xl font-bold text-green-700 mb-4">
+            O que é Agro Sustentável?
+          </h2>
+          <p className="text-lg leading-relaxed">
+            O agro sustentável busca unir tecnologia, produtividade e respeito
+            à natureza. Com práticas conscientes, é possível produzir mais,
+            preservando recursos naturais como água, solo e biodiversidade.
+          </p>
+        </div>
+
+        <img
+          src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop"
+          alt="Plantação sustentável"
+          className="rounded-3xl shadow-2xl"
+        />
+      </section>
+
+      {/* Benefícios */}
+      <section className="bg-white py-16 px-8">
+        <h2 className="text-4xl font-bold text-center text-green-700 mb-12">
+          Benefícios do Agro Sustentável
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="bg-green-100 p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition">
+            <h3 className="text-2xl font-semibold mb-4">🌱 Preservação Ambiental</h3>
+            <p>
+              Redução de impactos ambientais com práticas ecológicas e uso
+              consciente dos recursos naturais.
+            </p>
+          </div>
+
+          <div className="bg-lime-100 p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition">
+            <h3 className="text-2xl font-semibold mb-4">🚜 Tecnologia no Campo</h3>
+            <p>
+              Máquinas modernas e inovação ajudam a aumentar a produtividade
+              sem prejudicar o meio ambiente.
+            </p>
+          </div>
+
+          <div className="bg-green-200 p-8 rounded-3xl shadow-lg hover:-translate-y-2 transition">
+            <h3 className="text-2xl font-semibold mb-4">🌍 Futuro Melhor</h3>
+            <p>
+              Produção responsável garante alimento, economia forte e qualidade
+              de vida para futuras gerações.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Galeria */}
+      <section className="py-16 px-8 bg-green-50">
+        <h2 className="text-4xl font-bold text-center text-green-700 mb-12">
+          Campo e Sustentabilidade
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <img
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop"
+            alt="Plantação"
+            className="rounded-3xl shadow-lg h-72 w-full object-cover"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop"
+            alt="Agricultura sustentável"
+            className="rounded-3xl shadow-lg h-72 w-full object-cover"
+          />
+
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop"
+            alt="Natureza"
+            className="rounded-3xl shadow-lg h-72 w-full object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Estatísticas */}
+      <section className="bg-gradient-to-r from-lime-600 to-green-700 text-white py-16 px-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h3 className="text-5xl font-bold">80%</h3>
+            <p className="mt-3 text-lg">Economia de água com irrigação inteligente</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold">+50%</h3>
+            <p className="mt-3 text-lg">Aumento da produtividade com tecnologia</p>
+          </div>
+
+          <div>
+            <h3 className="text-5xl font-bold">100%</h3>
+            <p className="mt-3 text-lg">Compromisso com um futuro sustentável</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contato */}
+      <section className="py-16 px-8 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-green-700 mb-6">
+            Faça Parte Dessa Ideia
+          </h2>
+          <p className="text-lg mb-8">
+            Juntos podemos construir um agro mais forte, inovador e sustentável.
+          </p>
+
+          <form className="grid gap-4 max-w-2xl mx-auto">
+            <input
+              type="text"
+              placeholder="Seu nome"
+              className="p-4 rounded-2xl border border-green-300"
+            />
+
+            <input
+              type="email"
+              placeholder="Seu e-mail"
+              className="p-4 rounded-2xl border border-green-300"
+            />
+
+            <textarea
+              placeholder="Sua mensagem"
+              rows="5"
+              className="p-4 rounded-2xl border border-green-300"
+            ></textarea>
+
+            <button className="bg-green-700 text-white py-4 rounded-2xl font-semibold hover:bg-green-800 transition">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-green-900 text-white text-center py-6">
+        <p>
+          © 2026 Agro Forte — Futuro Sustentável | Equilíbrio entre produção e
+          meio ambiente.
+        </p>
+      </footer>
+    </div>
+  );
+}
