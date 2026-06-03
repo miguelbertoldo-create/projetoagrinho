@@ -1,255 +1,87 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
 }
 
-/* Corpo do site */
-body {
-  background-color: #f4fff4;
-  color: #333;
-  line-height: 1.6;
+body{
+    background:#f4f7f2;
+    color:#333;
 }
 
-/* Hero */
-.hero {
-  background: linear-gradient(to right, #1b5e20, #66bb6a);
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
+.hero{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
 }
 
-.hero h1 {
-  font-size: 55px;
-  margin-bottom: 20px;
+nav{
+    background:#1b5e20;
+    padding:15px;
+    text-align:center;
 }
 
-.hero p {
-  font-size: 22px;
-  max-width: 800px;
-  margin: auto;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
 }
 
-.hero button {
-  margin-top: 30px;
-  padding: 15px 35px;
-  border: none;
-  border-radius: 15px;
-  background: white;
-  color: #1b5e20;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:50px 20px;
 }
 
-.hero button:hover {
-  transform: scale(1.05);
-  background: #e8f5e9;
+h2{
+    color:#1b5e20;
+    margin-bottom:20px;
 }
 
-/* Sessões */
-section {
-  padding: 80px 10%;
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
 }
 
-/* Sobre */
-.sobre {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
+.card{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
 }
 
-.sobre-texto {
-  flex: 1;
+button{
+    margin-top:20px;
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#2e7d32;
+    color:white;
+    cursor:pointer;
 }
 
-.sobre-texto h2 {
-  font-size: 40px;
-  color: #2e7d32;
-  margin-bottom: 20px;
+button:hover{
+    background:#1b5e20;
 }
 
-.sobre-texto p {
-  font-size: 20px;
+#contador-area{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
 }
 
-.sobre img {
-  flex: 1;
-  width: 100%;
-  border-radius: 25px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+#contador{
+    font-size:3rem;
+    font-weight:bold;
 }
 
-/* Benefícios */
-.beneficios {
-  background: white;
-  text-align: center;
-}
-
-.beneficios h2 {
-  font-size: 42px;
-  color: #2e7d32;
-  margin-bottom: 50px;
-}
-
-.cards {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.card {
-  background: #dcedc8;
-  padding: 30px;
-  border-radius: 25px;
-  width: 300px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.card h3 {
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-/* Galeria */
-.galeria {
-  background: #f1f8e9;
-  text-align: center;
-}
-
-.galeria h2 {
-  font-size: 42px;
-  color: #2e7d32;
-  margin-bottom: 40px;
-}
-
-.imagens {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.imagens img {
-  width: 320px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Estatísticas */
-.estatisticas {
-  background: linear-gradient(to right, #7cb342, #2e7d32);
-  color: white;
-  text-align: center;
-}
-
-.estatisticas-container {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.estatistica h3 {
-  font-size: 55px;
-}
-
-.estatistica p {
-  font-size: 20px;
-  margin-top: 10px;
-}
-
-/* Contato */
-.contato {
-  background: white;
-  text-align: center;
-}
-
-.contato h2 {
-  font-size: 40px;
-  color: #2e7d32;
-  margin-bottom: 20px;
-}
-
-.contato p {
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 700px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-input,
-textarea {
-  padding: 15px;
-  border: 2px solid #a5d6a7;
-  border-radius: 15px;
-  font-size: 16px;
-}
-
-textarea {
-  resize: none;
-}
-
-form button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 15px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-form button:hover {
-  background: #1b5e20;
-}
-
-/* Rodapé */
-footer {
-  background: #1b5e20;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .hero p {
-    font-size: 18px;
-  }
-
-  .sobre {
-    flex-direction: column;
-  }
-
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .estatisticas-container {
-    flex-direction: column;
-  }
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
 }
