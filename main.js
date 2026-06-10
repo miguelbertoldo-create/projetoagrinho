@@ -1,35 +1,34 @@
-function animateValue(id, endValue, duration) {
-    let startValue = 0;
-    let increment = endValue / (duration / 20);
+document.addEventListener("DOMContentLoaded", () => {
+    // Valores finais para a animação
+    const targets = {
+        trees: 15420,    // Exemplo: 15.420 árvores
+        water: 2500000,  // Exemplo: 2.500.000 litros
+        carbon: 850      // Exemplo: 850 toneladas
+    };
 
-    const element = document.getElementById(id);
+    const animateCount = (id, targetValue) => {
+        const element = document.getElementById(id);
+        let startValue = 0;
+        const duration = 2000; // Duração da animação em milissegundos (2 segundos)
+        const stepTime = Math.abs(Math.floor(duration / targetValue));
+        
+        // Garante que o passo não seja zero e define uma velocidade fluida
+        const increment = Math.ceil(targetValue / 100); 
 
-    const timer = setInterval(() => {
-        startValue += increment;
+        const counter = setInterval(() => {
+            startValue += increment;
+            if (startValue >= targetValue) {
+                startValue = targetValue;
+                clearInterval(counter);
+            }
+            
+            // Formata o número para o padrão brasileiro (ex: 1.500 em vez de 1500)
+            element.innerText = startValue.toLocaleString('pt-BR');
+        }, 20);
+    };
 
-        if (startValue >= endValue) {
-            startValue = endValue;
-            clearInterval(timer);
-        }
-
-        element.textContent = Math.floor(startValue).toLocaleString("pt-BR");
-    }, 20);
-}
-
-window.addEventListener("load", () => {
-    animateValue("trees", 250000, 2000);
-    animateValue("water", 5000000, 2500);
-    animateValue("carbon", 12000, 3000);
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function(e){
-        e.preventDefault();
-
-        const section = document.querySelector(this.getAttribute("href"));
-
-        section.scrollIntoView({
-            behavior: "smooth"
-        });
-    });
+    // Executa a animação para cada contador
+    animateCount("trees", targets.trees);
+    animateCount("water", targets.water);
+    animateCount("carbon", targets.carbon);
 });
