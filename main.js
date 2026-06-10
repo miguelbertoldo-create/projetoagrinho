@@ -1,34 +1,65 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Valores finais para a animação
+    
+    // 1. ANIMAÇÃO DOS CONTADORES
     const targets = {
-        trees: 15420,    // Exemplo: 15.420 árvores
-        water: 2500000,  // Exemplo: 2.500.000 litros
-        carbon: 850      // Exemplo: 850 toneladas
+        trees: 18450,     /* Alvo de árvores */
+        water: 3200000,   /* Alvo de litros de água */
+        carbon: 1250      /* Alvo de CO2 em toneladas */
     };
 
     const animateCount = (id, targetValue) => {
         const element = document.getElementById(id);
+        if (!element) return;
+
         let startValue = 0;
-        const duration = 2000; // Duração da animação em milissegundos (2 segundos)
-        const stepTime = Math.abs(Math.floor(duration / targetValue));
-        
-        // Garante que o passo não seja zero e define uma velocidade fluida
-        const increment = Math.ceil(targetValue / 100); 
+        const duration = 2500; // Tempo total da animação (2.5 segundos)
+        const frameRate = 1000 / 60; // 60 frames por segundo
+        const totalFrames = Math.round(duration / frameRate);
+        const increment = targetValue / totalFrames;
+        let currentFrame = 0;
 
         const counter = setInterval(() => {
+            currentFrame++;
             startValue += increment;
-            if (startValue >= targetValue) {
-                startValue = targetValue;
+
+            if (currentFrame >= totalFrames) {
+                element.innerText = targetValue.toLocaleString('pt-BR');
                 clearInterval(counter);
+            } else {
+                element.innerText = Math.floor(startValue).toLocaleString('pt-BR');
             }
-            
-            // Formata o número para o padrão brasileiro (ex: 1.500 em vez de 1500)
-            element.innerText = startValue.toLocaleString('pt-BR');
-        }, 20);
+        }, frameRate);
     };
 
-    // Executa a animação para cada contador
+    // Inicializa a contagem automatizada
     animateCount("trees", targets.trees);
     animateCount("water", targets.water);
     animateCount("carbon", targets.carbon);
+
+    // 2. INTERCEPTAÇÃO E TRATAMENTO DO FORMULÁRIO DE CONTATO
+    const form = document.getElementById("agroForm");
+    const feedback = document.getElementById("formFeedback");
+
+    if (form && feedback) {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault(); // Evita o recarregamento da página
+
+            // Captura de valores inseridos
+            const nome = document.getElementById("nome").value;
+
+            // Simulação de envio bem-sucedido
+            feedback.classList.remove("hidden");
+            feedback.classList.add("success");
+            feedback.innerText = `Obrigado pelo contato, ${nome}! Nossa equipe de engenharia agronômica responderá em breve.`;
+
+            // Limpa o formulário após o envio
+            form.reset();
+
+            // Esconde a mensagem de sucesso após 5 segundos
+            setTimeout(() => {
+                feedback.classList.add("hidden");
+                feedback.classList.remove("success");
+            }, 5000);
+        });
+    }
 });

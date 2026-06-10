@@ -1,3 +1,149 @@
-html {
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRO FORTE, FUTURO SUSTENTÁVEL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <h1>🌱 AGRO FORTE</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#pilares">Pilares</a>
+            <a href="#tecnologia">Tecnologia</a>
+            <a href="#estatisticas">Estatísticas</a>
+            <a href="#contato" class="btn-nav">Contato</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container hero-content">
+        <h2>Produzir Mais, Preservar Melhor</h2>
+        <p>O agronegócio moderno utiliza a inovação científica para aumentar a segurança alimentar global, mantendo o equilíbrio ecológico e protegendo a biodiversidade.</p>
+        <a href="#sobre" class="btn-hero">Conhecer Práticas</a>
+    </div>
+</section>
+
+<section id="sobre" class="section">
+    <div class="container">
+        <h2>O que é Agro Sustentável?</h2>
+        <div class="grid-2">
+            <div>
+                <p>A agricultura sustentável é um modelo de produção que integra três objetivos principais: a saúde ambiental, a rentabilidade econômica e a equidade social e econômica.</p>
+                <p>Diferente dos métodos tradicionais predatórios, esse ecossistema foca na regeneração do solo, no respeito aos ciclos hidrológicos e no bem-estar das comunidades locais, garantindo recursos para as próximas gerações.</p>
+            </div>
+            <div class="destaque-box">
+                <h3>O Grande Desafio</h3>
+                <p>Até 2050, a população mundial demandará mais alimentos. A resposta não está em desmatar novas áreas, mas sim em otimizar e verticalizar a produção nas terras já existentes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="pilares" class="section gray-bg">
+    <div class="container">
+        <h2>Métodos de Manejo Ecológico</h2>
+        <p class="subtitle">Conheça as principais técnicas aplicadas no campo para mitigar impactos ambientais:</p>
+        
+        <div class="grid-3">
+            <div class="pilar-card">
+                <h4>🔄 Rotação de Culturas</h4>
+                <p>Alternar diferentes espécies vegetais na mesma área evita a exaustão de nutrientes do solo e quebra o ciclo de pragas naturais.</p>
+            </div>
+            <div class="pilar-card">
+                <h4>🍂 Plantio Direto</h4>
+                <p>Cultivo sobre os restos vegetais da colheita anterior. Protege o solo contra erosão, mantém a umidade e fixa o carbono na terra.</p>
+            </div>
+            <div class="pilar-card">
+                <h4>🐝 Integração Lavoura-Pecuária-Floresta (ILPF)</h4>
+                <p>Associa árvores, gado e plantações em uma mesma área, otimizando o espaço e gerando conforto térmico para os animais.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tecnologia" class="section green-bg">
+    <div class="container">
+        <h2>Tecnologia de Ponta no Campo</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>🚜 Agricultura de Precisão</h3>
+                <p>Sensores acoplados a maquinários, dados via satélite e mapeamento por drones ajudam a aplicar fertilizantes e defensivos apenas onde é estritamente necessário, reduzindo desperdícios.</p>
+            </div>
+
+            <div class="card">
+                <h3>📡 Monitoramento em Tempo Real</h3>
+                <p>Sistemas de Inteligência Artificial interpretam dados meteorológicos e do solo, antecipando geadas, secas ou focos de pragas antes que afetem a produção.</p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Irrigação Inteligente</h3>
+                <p>Sistemas baseados em gotejamento monitoram a umidade subjacente do solo, aplicando a quantidade exata de água necessária, economizando até 40% do recurso hídrico.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="estatisticas" class="section">
+    <div class="container">
+        <h2>Indicadores de Impacto Estimados</h2>
+        <p class="subtitle">Resultados anuais médios obtidos através da conversão para técnicas sustentáveis:</p>
+
+        <div class="stats">
+            <div class="stat">
+                <h3 id="trees">0</h3>
+                <p>Árvores Preservadas</p>
+            </div>
+
+            <div class="stat">
+                <h3 id="water">0</h3>
+                <p>Litros de Água Economizados</p>
+            </div>
+
+            <div class="stat">
+                <h3 id="carbon">0</h3>
+                <p>Toneladas de CO₂ Reduzidas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="section gray-bg">
+    <div class="container max-width-700">
+        <h2>Fale com um Especialista</h2>
+        <p class="text-center">Quer entender como migrar sua produção para o modelo sustentável? Envie uma mensagem.</p>
+        
+        <form class="form-contato" id="agroForm">
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" required placeholder="Digite seu nome">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" rows="5" required placeholder="Como podemos ajudar sua propriedade?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+        <div id="formFeedback" class="form-feedback hidden"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-content">
+        <p>© 2026 AGRO FORTE, FUTURO SUSTENTÁVEL | Produção Responsável para um Mundo Melhor</p>
+        <p>Desenvolvido com foco em Metas Globais de Sustentabilidade.</p>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
