@@ -8,62 +8,125 @@
 </head>
 <body>
 
-<header class="hero">
-    <h1>AGRO FORTE, FUTURO SUSTENTÁVEL</h1>
-    <p>Equilíbrio entre Produção e Meio Ambiente</p>
+<header>
+    <div class="container">
+        <h1>🌱 AGRO FORTE, FUTURO SUSTENTÁVEL</h1>
+        <p>Equilíbrio entre Produção e Meio Ambiente</p>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#tecnologia">Tecnologia</a>
+            <a href="#sustentabilidade">Sustentabilidade</a>
+            <a href="#estatisticas">Estatísticas</a>
+        </nav>
+    </div>
 </header>
 
-<nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#beneficios">Benefícios</a>
-    <a href="#contato">Contato</a>
-</nav>
-
-<section id="sobre">
-    <h2>Sobre</h2>
-    <p>
-        O agronegócio sustentável busca aumentar a produção de alimentos
-        preservando os recursos naturais para as futuras gerações.
-    </p>
+<section class="hero">
+    <div class="container">
+        <h2>Produzir Mais, Preservar Melhor</h2>
+        <p>
+            O agronegócio moderno busca aumentar a produtividade
+            sem comprometer os recursos naturais das futuras gerações.
+        </p>
+    </div>
 </section>
 
-<section id="beneficios">
-    <h2>Benefícios</h2>
+<section id="sobre" class="section">
+    <div class="container">
+        <h2>O que é Agro Sustentável?</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>🌱 Sustentabilidade</h3>
-            <p>Preservação dos recursos naturais.</p>
-        </div>
+        <p>
+            A agricultura sustentável utiliza técnicas que promovem
+            produtividade, conservação do solo, uso eficiente da água
+            e redução dos impactos ambientais.
+        </p>
 
-        <div class="card">
-            <h3>🚜 Tecnologia</h3>
-            <p>Inovação para aumentar a produtividade.</p>
-        </div>
+        <p>
+            O objetivo é garantir alimentos, fibras e energia para a
+            população enquanto protege ecossistemas e biodiversidade.
+        </p>
+    </div>
+</section>
 
-        <div class="card">
-            <h3>💧 Economia de Água</h3>
-            <p>Uso eficiente dos recursos hídricos.</p>
+<section id="tecnologia" class="section green">
+    <div class="container">
+        <h2>Tecnologia no Campo</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>🚜 Agricultura de Precisão</h3>
+                <p>
+                    Sensores, GPS e drones ajudam a otimizar recursos e
+                    aumentar a produtividade.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>📡 Monitoramento</h3>
+                <p>
+                    Sistemas inteligentes acompanham clima, solo e culturas
+                    em tempo real.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>💧 Irrigação Eficiente</h3>
+                <p>
+                    Tecnologias reduzem desperdícios e aumentam a eficiência
+                    do uso da água.
+                </p>
+            </div>
         </div>
     </div>
-
-    <button onclick="mostrarMensagem()">
-        Saiba Mais
-    </button>
-
-    <p id="mensagem"></p>
 </section>
 
-<section id="contador-area">
-    <h2>Impacto Positivo</h2>
-    <div id="contador">0</div>
-    <p>Hectares preservados</p>
+<section id="sustentabilidade" class="section">
+    <div class="container">
+        <h2>Sustentabilidade Ambiental</h2>
+
+        <ul>
+            <li>Preservação de matas nativas.</li>
+            <li>Proteção de rios e nascentes.</li>
+            <li>Redução de emissões de carbono.</li>
+            <li>Rotação de culturas.</li>
+            <li>Uso racional dos recursos naturais.</li>
+            <li>Recuperação de áreas degradadas.</li>
+        </ul>
+    </div>
 </section>
 
-<footer id="contato">
-    <p>© 2026 AGRO FORTE, FUTURO SUSTENTÁVEL</p>
+<section id="estatisticas" class="section green">
+    <div class="container">
+        <h2>Indicadores Sustentáveis</h2>
+
+        <div class="stats">
+            <div class="stat">
+                <h3 id="trees">0</h3>
+                <p>Árvores Preservadas</p>
+            </div>
+
+            <div class="stat">
+                <h3 id="water">0</h3>
+                <p>Litros de Água Economizados</p>
+            </div>
+
+            <div class="stat">
+                <h3 id="carbon">0</h3>
+                <p>Toneladas de CO₂ Reduzidas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2026 AGRO FORTE, FUTURO SUSTENTÁVEL |
+        Produção Responsável para um Mundo Melhor
+    </p>
 </footer>
 
 <script src="main.js"></script>
+
 </body>
 </html>

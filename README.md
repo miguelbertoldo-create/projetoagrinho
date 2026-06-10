@@ -1,14 +1,13 @@
 # AGRO FORTE, FUTURO SUSTENTÁVEL
 
-Projeto de site educativo sobre sustentabilidade no agronegócio.
+Site educativo sobre a importância do agronegócio sustentável e o equilíbrio entre produção agrícola e preservação ambiental.
 
-## Estrutura
+## Objetivos
 
-- index.html
-- style.css
-- main.js
-- LICENSE
-- README.md
+- Explicar o conceito de agricultura sustentável.
+- Mostrar tecnologias utilizadas no campo.
+- Apresentar práticas de preservação ambiental.
+- Incentivar a produção responsável.
 
 ## Tecnologias
 
@@ -16,12 +15,27 @@ Projeto de site educativo sobre sustentabilidade no agronegócio.
 - CSS3
 - JavaScript
 
+## Estrutura
+
+├── index.html
+├── style.css
+├── main.js
+├── README.md
+└── LICENSE
+
 ## Como executar
 
 1. Baixe os arquivos.
-2. Coloque todos na mesma pasta.
-3. Abra o arquivo `index.html` no navegador.
+2. Abra o arquivo `index.html` em qualquer navegador moderno.
 
-## Objetivo
+## Recursos
 
-Promover a conscientização sobre o equilíbrio entre produção agrícola e preservação ambiental.
+- Design responsivo.
+- Menu de navegação.
+- Animações suaves.
+- Conteúdo educativo.
+- Estatísticas dinâmicas.
+
+## Licença
+
+MIT License.
